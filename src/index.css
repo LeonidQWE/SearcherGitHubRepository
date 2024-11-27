@@ -1,6 +1,7 @@
 /* Colors */
 :root {
   --white: #FFF;
+  --danger: #F74646;
 
   --gray-50: #F6F8FF;
   --gray-100: #697C9A;
@@ -11,6 +12,7 @@
 
   --btn-primary: #0079FF;
   --btn-primary-hover: #60ABFF;
+  --shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }
 
 *,
