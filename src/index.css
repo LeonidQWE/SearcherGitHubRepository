@@ -8,6 +8,9 @@
   --gray-300: #2B3442;
   --gray-400: #1E2A47;
   --gray-500: #141D2F;
+
+  --btn-primary: #0079FF;
+  --btn-primary-hover: #60ABFF;
 }
 
 *,
