@@ -7,9 +7,22 @@ interface SearchProps {
   onSubmit: (text: string) => void;
 }
 
+type FormFields = {
+  username: HTMLInputElement;
+}
+
 export const Search = ({hasError, onSubmit}: SearchProps) => {
+  const handleSubmitSearch = (event: React.FormEvent<HTMLFormElement & FormFields>) => {
+    event.preventDefault();
+    const text = event.currentTarget.username.value
+    if (text) {
+      onSubmit(text);
+      event.currentTarget.reset();
+    }
+  }
+
   return (
-    <form onSubmit={(e) => onSubmit(e.currentTarget.username.value)}>
+    <form onSubmit={handleSubmitSearch}>
       <div className={styles.search}>
         <label htmlFor="search" className={styles.label}>
           <FaSearch className={styles.searchIcon}/>
