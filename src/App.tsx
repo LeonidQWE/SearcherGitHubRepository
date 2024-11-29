@@ -8,7 +8,7 @@ export default function App () {
     <Container>
       <Header />
       <Search hasError={true} onSubmit={() => {}}/>
-        <UserCard/>
+      <UserCard/>
     </Container>
   )
 }
