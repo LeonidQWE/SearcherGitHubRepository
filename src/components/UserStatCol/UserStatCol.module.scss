@@ -1,0 +1,18 @@
+.userStatCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+
+  &Title {
+    color: var(--gray-200);
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &Count {
+    font-size: 25px;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+}
