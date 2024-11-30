@@ -9,15 +9,24 @@ interface UserCardProps extends LocalGithubUser {}
 export const UserCard = (props: UserCardProps) => {
   return (
     <div className={styles.card}>
-      <UserImg avatar={props.avatar}/>
-      <UserTitle
-        name={props.name}
-        login={props.login}
-        created={props.created}/>
-      <UserStat
-        repos={props.repos}
-        following={props.following}
-        followers={props.followers}/>
+      <div>
+        <UserImg avatar={props.avatar}/>
+      </div>
+      <div className={styles.content}>
+        <UserTitle
+          name={props.name}
+          login={props.login}
+          created={props.created}
+        />
+        <p className={`${styles.bio} ${props.bio ? '' : styles.empty}`}>
+          {props.bio ? props.bio : 'This profile has not bio'}
+        </p>
+        <UserStat
+          repos={props.repos}
+          following={props.following}
+          followers={props.followers}
+        />
+      </div>
     </div>
   )
 }
