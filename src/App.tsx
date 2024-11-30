@@ -3,6 +3,7 @@ import { Container } from 'components/Container';
 import { Header } from 'components/Header';
 import { Search } from 'components/Search';
 import { UserCard } from 'components/UserCard';
+import { NotFound } from 'components/NotFound';
 import { GithubError, GithubUser, LocalGithubUser } from 'types';
 import { isGithubUser } from 'utils';
 import { extractGithubUder } from 'utils';
@@ -28,7 +29,7 @@ export default function App () {
     <Container>
       <Header />
       <Search hasError={!user} onSubmit={fetchUser}/>
-      {user ? <UserCard {...user}/> : <span>Not Found</span>}
+      {user ? <UserCard {...user}/> : <NotFound/>}
     </Container>
   )
 }
