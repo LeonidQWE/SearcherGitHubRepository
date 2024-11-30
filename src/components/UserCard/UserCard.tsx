@@ -1,8 +1,8 @@
 import { UserStat } from 'components/UserStat'
 import { LocalGithubUser } from 'types'
-import styles from './UserCard.module.scss'
 import { UserTitle } from 'components/UserTitle'
 import { UserImg } from 'components/UserImg'
+import styles from './UserCard.module.scss'
 
 interface UserCardProps extends LocalGithubUser {}
 
