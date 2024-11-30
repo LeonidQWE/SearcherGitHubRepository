@@ -16,11 +16,16 @@ export const UserCard = (props: UserCardProps) => {
         <UserTitle
           name={props.name}
           login={props.login}
-          created={props.created}/>
+          created={props.created}
+        />
+        <p className={`${styles.bio} ${props.bio ? '' : styles.empty}`}>
+          {props.bio ? props.bio : 'This profile has not bio'}
+        </p>
         <UserStat
           repos={props.repos}
           following={props.following}
-          followers={props.followers}/>
+          followers={props.followers}
+        />
       </div>
     </div>
   )
