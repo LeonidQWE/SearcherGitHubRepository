@@ -12,7 +12,7 @@ export const UserCard = (props: UserCardProps) => {
       <div>
         <UserImg avatar={props.avatar}/>
       </div>
-      <div>
+      <div className={styles.content}>
         <UserTitle
           name={props.name}
           login={props.login}
